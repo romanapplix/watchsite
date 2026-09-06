@@ -1,0 +1,114 @@
+/* --- BIOGRAPHY & ABOUT ME SECTION --- */
+.about-layout {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr; /* Image left, story right */
+    gap: 60px;
+    align-items: start;
+}
+
+/* Profile Visual Styling */
+.about-hero-frame {
+    position: relative;
+    border: 1px solid var(--border-color);
+    padding: 15px;
+    background: #ffffff;
+}
+
+.about-hero-frame img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    filter: grayscale(10%) contrast(105%); /* Gives photos a timeless, archival look */
+}
+
+/* Biography Editorial Typography */
+.about-dossier h1 {
+    font-family: var(--font-serif);
+    font-size: 42px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 5px;
+}
+
+.about-subtitle {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--accent-gold);
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.about-story {
+    font-size: 16px;
+    color: var(--text-main);
+    line-height: 1.8;
+}
+
+.about-story p {
+    margin-bottom: 20px;
+}
+
+/* Horological Philosophy Callout Box */
+.horology-quote {
+    font-family: var(--font-serif);
+    font-size: 18px;
+    font-style: italic;
+    color: var(--text-main);
+    border-left: 2px solid var(--accent-gold);
+    padding-left: 20px;
+    margin: 35px 0;
+    line-height: 1.6;
+}
+
+/* Contact / Outreach CTA Block */
+.about-cta {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid var(--border-color);
+}
+
+.about-cta h3 {
+    font-family: var(--font-serif);
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.about-cta p {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+}
+
+.btn-contact {
+    display: inline-block;
+    background: var(--text-main);
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 35px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 500;
+    transition: background 0.2s ease;
+}
+
+.btn-contact:hover {
+    background: var(--accent-gold);
+}
+
+/* Responsive Overrides */
+@media (max-width: 992px) {
+    .about-layout {
+        grid-template-columns: 1fr; /* Stacks image on top of text on mobile/tablet */
+        gap: 40px;
+    }
+    .about-hero-frame {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}

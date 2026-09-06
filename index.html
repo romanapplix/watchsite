@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horological Vault | Vintage Timepieces</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://googleapis.com" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Unified Master Header Navigation -->
+    <header>
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="index.html">HOROLOGY VAULT</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Collection</a></li>
+                <li><a href="about.html">About Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Exhibition Canvas -->
+    <main class="main-layout">
+        <h2 class="collection-title">The Curated Exhibition Portfolio</h2>
+        
+        <!-- NEW: Interactive Filter Navigation Bar -->
+        <div class="filter-bar">
+            <button class="filter-btn active" data-filter="all">All Pieces</button>
+            <button class="filter-btn" data-filter="wristwatches">Wristwatches</button>
+            <button class="filter-btn" data-filter="pocketwatches">Pocket Watches</button>
+            <button class="filter-btn" data-filter="clocks">Clocks</button>
+            <button class="filter-btn" data-filter="tools">Watchmaker Tools</button>
+        </div>
+        
+        <!-- The Precise Layout Matrix with Category Tags -->
+        <section class="watch-grid" id="portfolioGrid">
+            
+            <!-- Row 1 -->
+            <a href="product-detail.html" class="grid-card" data-category="wristwatches">
+                <img src="images/watch1.jpg" alt="Vintage Reference">
+                <h3>Omega Seamaster Cal. 565</h3>
+                <p>Circa 1966 • Automatic</p>
+            </a>
+
+            <a href="product-detail.html" class="grid-card" data-category="wristwatches">
+                <img src="images/watch2.jpg" alt="Vintage Reference">
+                <h3>Longines Flagship Ultra-Thin</h3>
+                <p>Circa 1959 • Manual Wind</p>
+            </a>
+
+            <a href="product-detail.html" class="grid-card" data-category="pocketwatches">
+                <img src="images/watch3.jpg" alt="Vintage Reference">
+                <h3>Waltham Vanguard 23J</h3>
+                <p>Circa 1908 • Pocket Watch</p>
+            </a>
+
+            <a href="product-detail.html" class="grid-card" data-category="clocks">
+                <img src="images/watch4.jpg" alt="Vintage Reference">
+                <h3>Jaeger-LeCoultre Atmos</h3>
+                <p>Circa 1960 • Perpetual Motion</p>
+            </a>
+
+            <!-- Row 2 -->
+            <a href="product-detail.html" class="grid-card" data-category="wristwatches">
+                <img src="images/watch5.jpg" alt="Vintage Reference">
+                <h3>Zenith Respirator "Kennedy"</h3>
+                <p>Circa 1968 • Automatic</p>
+            </a>
+
+            <a href="product-detail.html" class="grid-card" data-category="tools">
+                <img src="images/watch6.jpg" alt="Vintage Reference">
+                <h3>Bergeon 5555 Waterproof Tester</h3>
+                <p>Vintage Swiss Shop Tool</p>
+            </a>
+
+            <a href="product-detail.html" class="grid-card" data-category="pocketwatches">
+                <img src="images/watch7.jpg" alt="Vintage Reference">
+                <h3>Elgin Father Time</h3>
+                <p>Circa 1921 • Railroad Grade</p>
+            </a>
+
+            <a href="product-detail.html" class="grid-card" data-category="clocks">
+                <img src="images/watch8.jpg" alt="Vintage Reference">
+                <h3>Chelsea Ship's Bell Clock</h3>
+                <p>Circa 1945 • Striking Marine</p>
+            </a>
+
+            <!-- Row 3 -->
+            <a href="product-detail.html" class="grid-card" data-category="wristwatches">
+                <img src="images/watch9.jpg" alt="Vintage Reference">
+                <h3>Tudor Oyster Prince "Tuxedo"</h3>
+                <p>Circa 1958 • Automatic</p>
+            </a>
+
+            <a href="product-detail.html" class="grid-card" data-category="tools">
+                <img src="images/watch10.jpg" alt="Vintage Reference">
+                <h3>K&D Standard Staking Set</h3>
+                <p>Inverted Punch Matrix Box</p>
+            </a>
+
+            <a href="product-detail.html" class="grid-card" data-category="pocketwatches">
+                <img src="images/watch11.jpg" alt="Vintage Reference">
+                <h3>Hamilton Grade 992B</h3>
+                <p>Circa 1948 • 21 Jewels Elinvar</p>
+            </a>
+
+            <a href="product-detail.html" class="grid-card" data-category="tools">
+                <img src="images/watch12.jpg" alt="Vintage Reference">
+                <h3>Levin Lathe Collet Registry</h3>
+                <p>Precision Horology Tooling</p>
+            </a>
+
+        </section>
+    </main>
+
+    <!-- Master Footer & Site Map Matrix -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Exhibition Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Collection</a></li>
+                    <li><a href="about.html">About Me & Archive</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Documentation</h4>
+                <ul>
+                    <li><a href="about.html">About Me & Archive</a></li>
+                    <li><a href="#">Horological Restoration Journal</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Registry</h4>
+                <p>Inquiries: collector@horologyvault.com</p>
+                <p>Archive Location: Victoria, BC, Canada</p>
+                <p>© 2026 Horology Vault Collection.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Filtering Script Engine -->
+    <script>
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const cards = document.querySelectorAll('.grid-card');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // 1. Manage active states on buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+
+                // 2. Identify selection target category
+                const targetFilter = button.getAttribute('data-filter');
+
+                // 3. Evaluate matching metrics across the layout cards
+                cards.forEach(card => {
+                    const cardCategory = card.getAttribute('data-category');
+
+                    // If matches or 'all', fade in. Otherwise fade out.
+                    if (targetFilter === 'all' || targetFilter === cardCategory) {
+                        card.style.display = 'block';
+                        // Small timeout to allow display block to register before opacity change
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'scale(1)';
+                        }, 10);
+                    } else {
+                        card.style.opacity = '0';
+                        card.style.transform = 'scale(0.95)';
+                        // Wait for transition duration before hiding fully from DOM layout flow
+                        setTimeout(() => {
+                            card.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

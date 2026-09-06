@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omega Seamaster 1966 Archive | Horological Vault</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://googleapis.com" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Identical Navigation Header Lineage -->
+    <header>
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="index.html">HOROLOGY VAULT</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Wristwatches</a></li>
+                <li><a href="#">Pocket Watches</a></li>
+                <li><a href="#">Clocks</a></li>
+                <li><a href="#">Watchmaker Tools</a></li>
+                <li><a href="#">About Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Product Blueprint Panel Layout -->
+    <main class="sub-layout">
+        
+        <!-- Left Wing: Image Matrix and Switch Engine -->
+        <section class="gallery-vault">
+            <div class="master-frame">
+                <!-- Large Frame Target Element -->
+                <img id="viewfinder" src="images/img1.jpg" alt="Omega Seamaster Primary Display">
+            </div>
+            
+            <!-- 6 Component Icons below the viewport frame -->
+            <div class="icon-carousel">
+                <img class="icon-thumb active" src="images/img1.jpg" alt="Dial Macro View" onclick="engageSwap(this)">
+                <img class="icon-thumb" src="images/img2.jpg" alt="Profile View" onclick="engageSwap(this)">
+                <img class="icon-thumb" src="images/img3.jpg" alt="Caseback Crest" onclick="engageSwap(this)">
+                <img class="icon-thumb" src="images/img4.jpg" alt="Caliber 565 Movement" onclick="engageSwap(this)">
+                <img class="icon-thumb" src="images/img5.jpg" alt="Crown Crown Detail" onclick="engageSwap(this)">
+                <img class="icon-thumb" src="images/img6.jpg" alt="Wrist Profile Perspective" onclick="engageSwap(this)">
+            </div>
+        </section>
+
+        <!-- Right Wing: Historical Record & Feedback Engine -->
+        <section class="dossier-panel">
+            <h1>Omega Seamaster Automatic</h1>
+            <div class="maker-meta">Reference 166.010 • Caliber 565 • Manufactured 1966</div>
+            
+            <div class="history-text">
+                <p><strong>Historical Context:</strong> Launched in the mid-1960s, this specific reference exemplifies the transition of Omega’s design house from rugged utility tools to refined, elegant daily wear dress-sports watches. The model contains a striking, pristine silver starburst dial configuration paired with fine onyx-inlaid indices.</p>
+                
+                <p><strong>The Caliber Heritage:</strong> Underneath the heavy steel architecture sits the highly celebrated, copper-plated Omega Caliber 565 in-house mechanical automatic movement. Known famously among fine watchmaker communities for its structural endurance, it features a unique pull-out quickset date utility mechanism that remains an exceptional marvel of engineering mechanics from that era.</p>
+            </div>
+
+            <!-- Feedback Registry Container -->
+            <div class="feedback-box">
+                <h3>Collector Registry Inquiry</h3>
+                <form class="feedback-form" action="#" method="POST">
+                    <input type="text" name="collectorName" placeholder="Your Name" required>
+                    <input type="email" name="collectorEmail" placeholder="Your Email Address" required>
+                    <textarea name="collectorInquiry" rows="4" placeholder="Share insights or ask a question regarding this timepiece's history..." required></textarea>
+                    <button type="submit">Submit Registry Entry</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Identical Structural Footer Area -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Exhibition Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Wristwatches</a></li>
+                    <li><a href="#">Pocket Watches</a></li>
+                    <li><a href="#">Clocks</a></li>
+                    <li><a href="#">Watchmaker Tools</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Documentation</h4>
+                <ul>
+                    <li><a href="#">About Me & Archive</a></li>
+                    <li><a href="#">Horological Restoration Journal</a></li>
+                    <li><a href="#">Terms & Provenance Study</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Registry</h4>
+                <p>Inquiries: collector@horologyvault.com</p>
+                <p>Archive Location: Victoria, BC, Canada</p>
+                <p>© 2026 Horology Vault Collection.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Image Swap Logic Controller -->
+    <script>
+        function engageSwap(selectedIcon) {
+            // Target the large preview node element window and rewrite its path source 
+            document.getElementById('viewfinder').src = selectedIcon.src;
+            
+            // Sweep clear all active indicator flags from thumbnail structures
+            document.querySelectorAll('.icon-thumb').forEach(icon => icon.classList.remove('active'));
+            
+            // Apply selected focus aesthetic indicator flag to chosen element target
+            selectedIcon.classList.add('active');
+        }
+    </script>
+
+</body>
+</html>

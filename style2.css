@@ -1,0 +1,79 @@
+/* --- SUB PAGE: PRODUCT EXPLORER (UPDATED) --- */
+.sub-layout {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 50px;
+}
+
+/* Visual Vault Component (Left Side) */
+.gallery-vault {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.master-frame {
+    width: 100%;
+    border: 1px solid var(--border-color);
+    background: #ffffff;
+    padding: 20px;
+    overflow: hidden;
+}
+
+/* Added transition logic for smooth fade shifts */
+.master-frame img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: contain;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Updated to allow perfect 120px square grids */
+.icon-carousel {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 12px;
+}
+
+/* Fixed 120x120px Icons with Scale Effect */
+.icon-thumb {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border: 1px solid var(--border-color);
+    background: #ffffff;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon-thumb:hover {
+    opacity: 0.9;
+    transform: scale(1.03);
+}
+
+.icon-thumb.active {
+    opacity: 1;
+    border-color: var(--accent-gold);
+    transform: scale(1.03);
+    box-shadow: 0 4px 10px rgba(170, 132, 83, 0.15);
+}
+
+/* Utility class applied via Javascript during transitions */
+.fade-out {
+    opacity: 0 !important;
+}
+
+/* Keep layouts clean on tablets */
+@media (max-width: 1200px) {
+    .icon-thumb {
+        width: 100px;
+        height: 100px;
+    }
+}
